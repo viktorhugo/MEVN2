@@ -3,15 +3,15 @@
   <div>
     <h1>This is an about page</h1>
     <div v-for="tarea in datos" :key="tarea.tittle">
-      <span><b>{{ tarea.title }}</b></span><br />
-      <span>{{ tarea.description }}</span>
+      <span><b>{{ tarea.titulo }}</b></span><br />
+      <span>{{ tarea.descripcion }}</span>
     </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import servicioTareas from "@/services/ServicioTareas";
+import servicioTareas from "@/services/ServicioTareas.js";
 export default {
   data() {
     return {
@@ -20,6 +20,7 @@ export default {
   },
   mounted() {
     this.traerTareas();
+    //this.traerDatos();
   },
   methods: {
     traerTareas() {
